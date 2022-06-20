@@ -1,4 +1,5 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
 void find_ith_bit(int a, int i){
     int mask = 1 << i;
@@ -20,8 +21,20 @@ void set_ith_bit_to_0(int a, int i){
     int result = a ^ mask;
     cout<<result;
 }
+void number_of_bits(int a){
+    int count = 0;
+    while(a != 0){
+        a = a>>1;
+        count++;
+    }
+    cout<<count<<" no. of bits."<<endl;
+}
 int main(){
-    set_ith_bit_to_0(5,2);
+    number_of_bits(8);
     return 0;
 }
-// 0 0 1 0 1
+// 1 1 0 1
+// 1 1 0 0
+// 1 1 0 0
+// 1 0 1 1
+// 1 
