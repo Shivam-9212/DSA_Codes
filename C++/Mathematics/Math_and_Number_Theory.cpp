@@ -18,9 +18,22 @@ bool prime_numbers(int a){
     }
     return true;
 }
+int GCD(int a,int b){
+    if(b == 0){
+        return a;
+    }
+    return GCD(b,a%b);
+}
 void total_prime_factors(int a){
     vector<int> vec1;
-
+    for(int i = 1; i <= a; i++){
+        if((i == 1) || (i == 2) || (i == 3) || (i == 5)){
+            vec1.push_back(i);
+        }
+        else if((i % 2 != 0) && (i % 3 != 0) && (i % 5 != 0)){
+            vec1.push_back(i);
+        }
+    }
     for(int i = 0; i < vec1.size(); i++){
         cout<<vec1.at(i)<<" ";
     }
@@ -41,6 +54,6 @@ void palindrome(int a){
     }
 }
 int main(){
-    total_prime_factors(18);
+    cout<<GCD(270, 192);
     return 0;
 }
