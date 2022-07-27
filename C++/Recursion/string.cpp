@@ -17,6 +17,9 @@ void powerset(string s, int i, string curr){
     powerset(s,i+1,curr);
     
 }
+bool match(){
+    for(int i = 0; i < )
+}
 int main(){
     permute("madal",0 ,4);
     return 0;
